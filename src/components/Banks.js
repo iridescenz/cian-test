@@ -7,9 +7,9 @@ export const Banks = () => {
       {banks.map((el) => {
         return (
           <label key={el.value}>
-            <h2>{el.name}</h2>
+            {el.pic}
             <input type='radio' name='radio' value='bank' />
-            <img src={`${el.value}.png`} alt={el.value} />
+            <h2>{el.name}</h2>
           </label>
         )
       })}

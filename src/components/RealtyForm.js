@@ -9,6 +9,7 @@ export const RealtyForm = () => {
     <div className='realty-form item'>
       {data.map((el) => (
         <label key={el.id}>
+        {el.pic}
           <input checked={el.id === state} onChange={handleChange} value={el.id} type='radio' name='estate'/>
           <h2>{el.type}</h2>
         </label>
