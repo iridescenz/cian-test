@@ -1,23 +1,28 @@
 import React from 'react'
 
-export const SearchForm = ({ name, id, handleChange, handleSubmit, placeholder }) => {
+export const SearchForm = ({
+  name,
+  handleChange,
+  handleSubmit,
+  placeholder,
+}) => {
   return (
     <div className='search-form'>
-      <div className='seach-form item'>
-        <label key={id}>
-          <h2 className='header'>{name}</h2>
-          <form className='form' onSubmit={handleSubmit}>
-          </form>
-          <div className='icon'></div>
+      <div className='seach-form items'>
+        <h1 className='header'>{name}</h1>
+        <form className='form' onSubmit={handleSubmit}>
           <input
             className='input'
-            type='submit'
+            type='text'
             name='query'
             value={placeholder}
             onChange={handleChange}
             placeholder={'Введите'}
           />
-        </label>
+          <button className='button' type='submit'>
+            ₽
+          </button>
+        </form>
       </div>
     </div>
   )

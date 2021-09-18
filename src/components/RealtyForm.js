@@ -1,19 +1,28 @@
-import React, {useState} from 'react'
-import {realtyTypes as data} from './realty-types'
+import React, { useState } from 'react'
+import { realtyTypes as data } from './realty-types'
 
 export const RealtyForm = () => {
   const [state, setState] = useState('apart')
   const handleChange = (e) => setState(e.target.value)
 
   return (
-    <div className='realty-form item'>
-      {data.map((el) => (
-        <label key={el.id}>
-        {el.pic}
-          <input checked={el.id === state} onChange={handleChange} value={el.id} type='radio' name='estate'/>
-          <h2>{el.type}</h2>
-        </label>
-      ))}
+    <div className='realty-block'>
+      <h1>Тип недвижимости</h1>
+      <div className='realty-form items'>
+        {data.map((el) => (
+          <label key={el.id}>
+            {el.pic}
+            <input
+              checked={el.id === state}
+              onChange={handleChange}
+              value={el.id}
+              type='radio'
+              name='estate'
+            />
+            <h2>{el.type}</h2>
+          </label>
+        ))}
+      </div>
     </div>
   )
 }
@@ -22,7 +31,7 @@ export const RealtyForm = () => {
 // insurance: boolean
 // initialPayment: number | undefined
 // amount: number | undefined
-// 
+//
 
 // realtyType: "FLAT",
 // productTypes: [

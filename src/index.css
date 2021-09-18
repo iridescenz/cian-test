@@ -7,21 +7,31 @@
 body {
   margin: 0;
   padding:0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Lato', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-.item  h2 {
+h2 {
 color:grey;
+font-family: 'Lato', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+display: flex;
+align-items: center;
 }
-
+h1 {
+    color:black;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+}
 pg-container {
   display: flex;
   flex-direction: column;
@@ -50,3 +60,4 @@ h2 {
   font-size: 16px;
   line-height: 22px;
 }
+

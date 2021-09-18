@@ -3,7 +3,9 @@ import { banksData as banks } from './banksData'
 
 export const Banks = () => {
   return (
-    <div className='banks-list item'>
+    <div className='banks-block'>
+        <h1>Банк</h1>
+    <div className='banks-list items'>
       {banks.map((el) => {
         return (
           <label key={el.value}>
@@ -13,6 +15,7 @@ export const Banks = () => {
           </label>
         )
       })}
+    </div>
     </div>
   )
 }
