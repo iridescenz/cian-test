@@ -8,10 +8,10 @@ export const Banks = () => {
     <div className='banks-list items'>
       {banks.map((el) => {
         return (
-          <label key={el.value}>
-            {el.pic}
+          <label key={el.bankValue}>
+            {el.bankLogo}
             <input type='radio' name='radio' value='bank' />
-            <h2>{el.name}</h2>
+            <h2>{el.bankName}</h2>
           </label>
         )
       })}

@@ -1,8 +1,8 @@
 export const banksData = [
   {
-    name: 'ВТБ',
-    value: 'bank-vtb',
-    pic: (
+    bankName: 'ВТБ',
+    bankValue: 'bank-vtb',
+    bankLogo: (
       <svg
         width='24'
         height='24'
@@ -27,9 +27,9 @@ export const banksData = [
     ),
   },
   {
-    name: 'СовкомБанк',
-    value: 'bank-sovcom',
-    pic: (
+    bankName: 'СовкомБанк',
+    bankValue: 'bank-sovcom',
+    bankLogo: (
       <svg
         width='24'
         height='24'
@@ -49,9 +49,9 @@ export const banksData = [
     ),
   },
   {
-    name: 'Росбанк Дом',
-    value: 'bank-domrf',
-    pic: (
+    bankName: 'Росбанк Дом',
+    bankValue: 'bank-domrf',
+    bankLogo: (
       <svg
         width='24'
         height='24'
@@ -72,9 +72,9 @@ export const banksData = [
     ),
   },
   {
-    name: 'Газпромбанк',
-    value: 'bank-gpb',
-    pic: (
+    bankName: 'Газпромбанк',
+    bankValue: 'bank-gpb',
+    bankLogo: (
       <svg
         width='24'
         height='24'
@@ -96,9 +96,9 @@ export const banksData = [
     ),
   },
   {
-    name: 'Открытие',
-    value: 'bank-otkrytye',
-    pic: (
+    bankName: 'Открытие',
+    bankValue: 'bank-otkrytye',
+    bankLogo: (
       <svg
         width='24'
         height='24'
@@ -115,9 +115,9 @@ export const banksData = [
     ),
   },
   {
-    name: 'ПСБ',
-    value: 'bank-psb',
-    pic: (
+    bankName: 'ПСБ',
+    bankValue: 'bank-psb',
+    bankLogo: (
       <svg
         width='24'
         height='24'
@@ -138,9 +138,9 @@ export const banksData = [
     ),
   },
   {
-    name: 'Райффайзенбанк',
-    value: 'bank-raif',
-    pic: (
+    bankName: 'Райффайзенбанк',
+    bankValue: 'bank-raif',
+    bankLogo: (
       <svg
         width='24'
         height='24'

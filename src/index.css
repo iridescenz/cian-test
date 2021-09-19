@@ -7,54 +7,55 @@
 body {
   margin-left: 100px;
   margin-top: 0;
-  padding:0;
+  padding: 0;
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h2 {
-color:grey;
-font-family: 'Lato', sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 22px;
-display: flex;
-align-items: center;
+  color: grey;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
 }
 h1 {
-    color:black;
-    font-family: 'Lato', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
+  color: black;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
 }
 pg-container {
   display: flex;
   flex-direction: column;
 }
-.banks-list, .search-form, .realty-form{
+.banks-list,
+.search-form,
+.realty-form {
   display: flex;
   flex-direction: column;
 }
 
-
 label {
   display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 8px 16px;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 16px;
 }
 
 h2 {
-  margin:0;
+  margin: 0;
   padding: 0;
-  margin-block-start:0;
-  margin-block-end:0;
+  margin-block-start: 0;
+  margin-block-end: 0;
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
@@ -66,11 +67,34 @@ h2 {
   margin-top: 0;
   padding-left: 50px;
   margin-left: 50px;
-  width: 350px;
+  width: 300px;
   height: auto;
-  border: 1px solid var(--border-color);
-  position: absolute;
+  border: 1px solid rgb(235, 231, 231);
   background: #ffffff;
   box-shadow: 0px 4px 14px rgba(56, 69, 117, 0.25);
   border-radius: 6px;
+}
+.card-container {
+  display: flex;
+  width: 400px;
+  height: auto;
+  flex-direction: column;
+  gap: 20px;
+}
+.pg-container {
+  width: 700px;
+  margin-top:50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  border: 1px solid rgb(235, 231, 231);
+  background: #ffffff;
+  box-shadow: 0px 4px 14px rgba(56, 69, 117, 0.25);
+  border-radius: 6px;
+  width: 300px;
+  height: 220px;
+  border-radius: 4px;
+  padding: 20px;
 }

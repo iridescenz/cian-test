@@ -3,12 +3,12 @@ import { Banks } from './Banks'
 import { Plan } from './Plan'
 import { RealtyForm } from './RealtyForm'
 import { Insurance } from './Insurance'
-import { LoanOptions } from './LoanOptions'
+import { LoanForm } from './LoanForm'
 
 export const SearchComponent = () => {
   return (
     <div className='search-component'>
-      <LoanOptions />
+      <LoanForm />
       <RealtyForm />
       <Plan />
       <Insurance />
