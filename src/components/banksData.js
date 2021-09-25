@@ -1,30 +1,15 @@
+import { ReactComponent as VtbLogo } from './vtb.svg';
+import vtbLogoSrc from './vtb.svg'
+
+// фон в лейбле
+//
+console.log(vtbLogoSrc)
+
 export const banksData = [
   {
     bankName: 'ВТБ',
     bankValue: 'bank-vtb',
-    bankLogo: (
-      <svg
-        width='24'
-        height='24'
-        viewBox='0 0 24 24'
-        fill='none'
-        xmlns='http://www.w3.org/2000/svg'
-      >
-        <rect y='-6.10352e-05' width='24' height='24' rx='12' fill='white' />
-        <path
-          d='M5.92857 5.99994L4.85714 8.91886H20.9286L22 5.99994H5.92857Z'
-          fill='#009FDF'
-        />
-        <path
-          d='M4.5 10.5405L3.42857 13.4594H19.5L20.5714 10.5405H4.5Z'
-          fill='#009FDF'
-        />
-        <path
-          d='M3.07143 15.081L2 17.9999H18.0714L19.1429 15.081H3.07143Z'
-          fill='#009FDF'
-        />
-      </svg>
-    ),
+    bankLogo: <VtbLogo />
   },
   {
     bankName: 'СовкомБанк',

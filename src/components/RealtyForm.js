@@ -33,6 +33,9 @@ export const RealtyForm = () => {
 // amount: number | undefined
 //
 
+//svg v css//как фон
+//функции
+
 // realtyType: "FLAT",
 // productTypes: [
 //   {productType: "NEW", name: "Новостройка"},
