@@ -34,7 +34,7 @@ h1 {
   display: flex;
   align-items: center;
 }
-pg-container {
+.pg-container {
   display: flex;
   flex-direction: column;
 }
@@ -44,6 +44,8 @@ pg-container {
   display: flex;
   flex-direction: column;
 }
+/* 
+filter: grayscale(.9) brightness(1.5); */
 
 label {
   display: flex;

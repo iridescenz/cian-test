@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import {planValues} from './planValues'
 
-export const Plan = () => {
-  const [plan, setPlan] = useState('all')
-  const handleChange = (e) => setPlan(e.target.value)
+export const Plan = ({value, onChange} ) => {
+  const handleChange = (e) => {
+      onChange(e.target.value)
+  }
   return (
     <div className='plan-block'>
     <h1>Программа</h1>
@@ -11,7 +12,7 @@ export const Plan = () => {
             {planValues.map((el) => (
           <label key={el.id}>
             <input
-              checked={el.id === plan}
+              checked={el.id === value}
               onChange={handleChange}
               value={el.id}
               type='radio'

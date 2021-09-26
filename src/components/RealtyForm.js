@@ -1,25 +1,35 @@
 import React, { useState } from 'react'
 import { realtyTypes as data } from './realty-types'
+import flat from './logos/flat-logo.svg'
+import apart from './logos/apart-logo.svg'
+import room from './logos/room-logo.svg'
+import house from './logos/house-logo.svg'
 
-export const RealtyForm = () => {
-  const [state, setState] = useState('apart')
-  const handleChange = (e) => setState(e.target.value)
 
+const url = {
+  flat, apart, room, house
+}
+
+export const RealtyForm = ({ value, onChange }) => {
+  const[ realtyType, setRealtyType] = useState(value) // это тут нужно?
+  const handleChange = (e) => {
+    setRealtyType(e.target.value)
+    onChange(e.target.value)
+  }
   return (
     <div className='realty-block'>
       <h1>Тип недвижимости</h1>
       <div className='realty-form items'>
         {data.map((el) => (
           <label key={el.id} style={{
-              backgroundImage: `url('/logos/${el.id}-logo.svg')`,
+              backgroundImage: `url(${url[el.id]})`,
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center left',
             }}
           >
             <input
-              checked={el.id === state}
+              checked={el.id === value}
               onChange={handleChange}
-
               value={el.id}
               type='radio'
               name='estate'
