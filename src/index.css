@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   margin-left: 100px;
   margin-top: 0;
@@ -47,7 +48,7 @@ pg-container {
 label {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   padding: 8px 16px;
 }
 

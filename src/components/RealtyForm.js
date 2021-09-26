@@ -10,11 +10,16 @@ export const RealtyForm = () => {
       <h1>Тип недвижимости</h1>
       <div className='realty-form items'>
         {data.map((el) => (
-          <label key={el.id}>
-            {el.pic}
+          <label key={el.id} style={{
+              backgroundImage: `url('/logos/${el.id}-logo.svg')`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center left',
+            }}
+          >
             <input
               checked={el.id === state}
               onChange={handleChange}
+
               value={el.id}
               type='radio'
               name='estate'

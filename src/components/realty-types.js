@@ -1,7 +1,7 @@
-import { ReactComponent as FlatLogo } from '../components/logos/flat-logo.svg'
-import { ReactComponent as ApartLogo } from '../components/logos/apart-logo.svg'
-import { ReactComponent as HouseLogo } from '../components/logos/house-logo.svg'
-import { ReactComponent as RoomLogo } from '../components/logos/room-logo.svg'
+import { ReactComponent as FlatLogo } from './logos/flat-logo.svg'
+import { ReactComponent as ApartLogo } from './logos/apart-logo.svg'
+import { ReactComponent as HouseLogo } from './logos/house-logo.svg'
+import { ReactComponent as RoomLogo } from './logos/room-logo.svg'
 
 export const realtyTypes = [
   {
