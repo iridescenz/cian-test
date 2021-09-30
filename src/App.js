@@ -5,7 +5,7 @@ import { offers } from './components/data'
 
 function App() {
   const [filters, setFilters] = useState({
-    banks: [], // ["bank-vtb", "bank-domrf"]
+    banks: [], 
     realtyType: 'flat',
     insurance: false,
     plan: 'all'

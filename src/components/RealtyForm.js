@@ -11,9 +11,7 @@ const url = {
 }
 
 export const RealtyForm = ({ value, onChange }) => {
-  const[ realtyType, setRealtyType] = useState(value) // это тут нужно?
   const handleChange = (e) => {
-    setRealtyType(e.target.value)
     onChange(e.target.value)
   }
   return (
