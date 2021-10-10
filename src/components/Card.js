@@ -1,32 +1,51 @@
 import React from 'react'
-
+import { banksData } from './banksData'
+import { productValues } from './productValues'
 export const Card = ({
-  bankName,
-  bankLogo,
-  planValue,
+  bankId,
+  offerId,
+  product,
+  creditProgram,
   rate,
-  loanAmount,
-  payment,
+  minInitialPayment,
+  maxInitialPayment,
+  maxPayment,
+  minAmount,
+  maxAmount,
+  minTerm,
+  maxTerm,
+  requirements,
 }) => {
+  const bankLogo = banksData
+    .filter((el) => el.bankId === bankId)
+    .map((el) => el.bankLogo)
+  const bankName = banksData
+    .filter((el) => el.bankId === bankId)
+    .map((el) => el.bankName)
+  const productType = productValues
+    .filter((el) => el.id === product)
+    .map((el) => el.productValue)
   return (
-    <div className='card'>
+    <div className='card' key={offerId}>
       <div className='card-header'>
-        <h1>{bankName}</h1>
+        <div className='b-name'>
+          <h1>{bankName}</h1>
+          <h2 className='product-value'>{productType}</h2>
+        </div>
         {bankLogo}
       </div>
-      <h2 className='plan-value'>{planValue}</h2>
       <div className='loan-info'>
         <div className='rate'>
           <h2>Ставка</h2>
-          <h1>{rate}</h1>
+          <h1>{rate * 100} %</h1>
         </div>
         <div className='loan'>
           <h2>Кредит</h2>
-          <h1>{loanAmount}</h1>
+          <h1>до {maxAmount}</h1>
         </div>
         <div className='payment'>
-          <h2>Взнос</h2>
-          <h1>{payment}</h1>
+          <h2>Взнос </h2>
+          <h1> от {minInitialPayment * 100} %</h1>
         </div>
       </div>
       <div></div>

@@ -8,7 +8,7 @@ function App() {
     banks: [], 
     realtyType: 'flat',
     insurance: false,
-    plan: 'all'
+    product: 'all'
   })
 
   const filteredOffers = offers.filter(el => filters.banks.length === 0 || filters.banks.includes(el.bankId))
@@ -21,7 +21,7 @@ function App() {
   // карточка 
   return (
     <div className='pg-container'>
-      <CardContainer />
+      <CardContainer offers={filteredOffers}/>
       <SearchComponent filters={filters} changeFilter={changeFilter} />
     </div>
   )

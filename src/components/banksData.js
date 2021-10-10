@@ -10,37 +10,37 @@ import { ReactComponent as RaifLogo } from './logos/bank-raif.svg';
 export const banksData = [
   {
     bankName: 'ВТБ',
-    bankValue: 'bank-vtb',
+    bankId: 'bank-vtb',
     bankLogo: <VtbLogo />
   },
   {
     bankName: 'СовкомБанк',
-    bankValue: 'bank-sovcom',
+    bankId: 'bank-sovcom',
     bankLogo: <SovComLogo />
   },
   {
     bankName: 'Росбанк Дом',
-    bankValue: 'bank-domrf',
+    bankId: 'bank-domrf',
     bankLogo: <RosBankLogo />,
   },
   {
     bankName: 'Газпромбанк',
-    bankValue: 'bank-gpb',
+    bankId: 'bank-gpb',
     bankLogo: <GpbLogo />,
   },
   {
     bankName: 'Открытие',
-    bankValue: 'bank-otkrytye',
+    bankId: 'bank-otkrytye',
     bankLogo: <OtktytyeLogo />,
   },
   {
     bankName: 'ПСБ',
-    bankValue: 'bank-psb',
+    bankId: 'bank-psb',
     bankLogo: <PsbLogo />,
   },
   {
     bankName: 'Райффайзенбанк',
-    bankValue: 'bank-raif',
+    bankId: 'bank-raif',
     bankLogo: <RaifLogo />,
   },
 ]

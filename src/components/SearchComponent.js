@@ -1,6 +1,6 @@
 import React from 'react'
 import { Banks } from './Banks'
-import { Plan } from './Plan'
+import { Product } from './Product'
 import { RealtyForm } from './RealtyForm'
 import { Insurance } from './Insurance'
 import { LoanForm } from './LoanForm'
@@ -14,9 +14,9 @@ export const SearchComponent = ({ filters, changeFilter }) => {
         value={filters.realtyType}
         onChange={(value) => changeFilter('realtyType', value)}
       />
-      <Plan
-        value={filters.plan}
-        onChange={(value) => changeFilter('plan', value)}
+      <Product
+        value={filters.product}
+        onChange={(value) => changeFilter('product', value)}
       />
       <Insurance
         value={filters.insurance}

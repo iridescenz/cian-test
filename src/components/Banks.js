@@ -18,13 +18,13 @@ export const Banks = ({ value, onChange }) => {
       <div className='banks-list items'>
         {banks.map((el) => {
           return (
-            <label key={el.bankValue}>
+            <label key={el.bankId}>
               {el.bankLogo}
               <input
                 type='checkbox'
                 name='bank'
-                value={el.bankValue}
-                checked={value.includes(el.bankValue)}
+                value={el.bankId}
+                checked={value.includes(el.bankId)}
                 onChange={handleChange}
               />
               <h2>{el.bankName}</h2>
