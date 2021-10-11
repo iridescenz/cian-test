@@ -1,4 +1,4 @@
-import {insurancePredicate} from './insurancePredicate'
+import { insurancePredicate } from './insurancePredicate'
 
 describe('insurancePredicate', () => {
   test('offer with truthy insurance requirement', () => {

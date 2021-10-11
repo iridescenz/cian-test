@@ -1,3 +1,5 @@
+import { realtyTypePredicate } from './realtyTypePredicate'
+
 describe('filters', () => {
   test('realtyTypePredicate', () => {
     const offer = {

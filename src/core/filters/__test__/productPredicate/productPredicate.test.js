@@ -1,4 +1,4 @@
-import {productPredicate} from './productPredicate'
+import { productPredicate } from './productPredicate'
 
 describe('filter by product type', () => {
   test('productPredicate', () => {
