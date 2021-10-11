@@ -37,7 +37,7 @@ export const Card = ({
       <div className='loan-info'>
         <div className='rate'>
           <h2>Ставка</h2>
-          <h1>{rate * 100} %</h1>
+          <h1>{(rate * 100).toFixed(2)} %</h1>
         </div>
         <div className='loan'>
           <h2>Кредит</h2>
@@ -45,7 +45,7 @@ export const Card = ({
         </div>
         <div className='payment'>
           <h2>Взнос </h2>
-          <h1> от {minInitialPayment * 100} %</h1>
+          <h1> от {(minInitialPayment * 100)} %</h1>
         </div>
       </div>
       <div></div>

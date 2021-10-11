@@ -7,6 +7,7 @@ export const CardContainer = ({ offers }) => {
       {offers.length > 1 ? offers.map((el) => {
         return (
           <Card
+            key={el.offerId + el.bankId}
             bankId={el.bankId}
             offerId={el.offerId}
             product={el.product}
