@@ -4,16 +4,16 @@ import { Card } from './Card'
 export const CardContainer = ({ offers }) => {
   return (
     <div className='card-container'>
-      {offers.length > 1 ? offers.map((el) => {
+      {offers.length > 1 ? offers.map((offer) => {
         return (
           <Card
-            key={el.offerId + el.bankId}
-            bankId={el.bankId}
-            offerId={el.offerId}
-            product={el.product}
-            rate={el.rate}
-            minInitialPayment={el.minInitialPayment}
-            maxAmount={el.maxAmount}
+            key={offer.offerId + offer.bankId}
+            bankId={offer.bankId}
+            offerId={offer.offerId}
+            product={offer.product}
+            rate={offer.rate}
+            minInitialPayment={offer.minInitialPayment}
+            maxAmount={offer.maxAmount}
           />
         )
       }) : <h1>Поиск не дал результатов</h1>}

@@ -17,14 +17,14 @@ export const Card = ({
   requirements,
 }) => {
   const bankLogo = banksData
-    .filter((el) => el.bankId === bankId)
-    .map((el) => el.bankLogo)
+    .filter((bank) => bank.bankId === bankId)
+    .map((bank) => bank.bankLogo)
   const bankName = banksData
-    .filter((el) => el.bankId === bankId)
-    .map((el) => el.bankName)
+    .filter((bank) => bank.bankId === bankId)
+    .map((bank) => bank.bankName)
   const productType = productValues
-    .filter((el) => el.id === product)
-    .map((el) => el.productValue)
+    .filter((prod) => prod.id === product)
+    .map((prod) => prod.productValue)
   return (
     <div className='card' key={offerId}>
       <div className='card-header'>
@@ -45,7 +45,7 @@ export const Card = ({
         </div>
         <div className='payment'>
           <h2>Взнос </h2>
-          <h1> от {(minInitialPayment * 100)} %</h1>
+          <h1> от {minInitialPayment * 100} %</h1>
         </div>
       </div>
       <div></div>

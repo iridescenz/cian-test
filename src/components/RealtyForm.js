@@ -20,23 +20,23 @@ export const RealtyForm = ({ value, onChange }) => {
     <div className='realty-block'>
       <h1>Тип недвижимости</h1>
       <div className='realty-form items'>
-        {data.map((el) => (
+        {data.map((realtyType) => (
           <label
-            key={el.id}
+            key={realtyType.id}
             style={{
-              backgroundImage: `url(${url[el.id]})`,
+              backgroundImage: `url(${url[realtyType.id]})`,
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center left',
             }}
           >
             <input
-              checked={el.id === value}
+              checked={realtyType.id === value}
               onChange={handleChange}
-              value={el.id}
+              value={realtyType.id}
               type='radio'
               name='estate'
             />
-            <h2>{el.type}</h2>
+            <h2>{realtyType.type}</h2>
           </label>
         ))}
       </div>

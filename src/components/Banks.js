@@ -5,7 +5,7 @@ export const Banks = ({ value, onChange }) => {
   function handleChange(e) {
     let arr
     if (value.includes(e.target.value)) {
-      arr = value.filter((el) => el !== e.target.value)
+      arr = value.filter((bankValue) => bankValue !== e.target.value)
     } else {
       arr = [...value, e.target.value]
     }
@@ -16,18 +16,18 @@ export const Banks = ({ value, onChange }) => {
     <div className='banks-block'>
       <h1>Банк</h1>
       <div className='banks-list items'>
-        {banks.map((el) => {
+        {banks.map((bank) => {
           return (
-            <label key={el.bankId}>
-              {el.bankLogo}
+            <label key={bank.bankId}>
+              {bank.bankLogo}
               <input
                 type='checkbox'
                 name='bank'
-                value={el.bankId}
-                checked={value.includes(el.bankId)}
+                value={bank.bankId}
+                checked={value.includes(bank.bankId)}
                 onChange={handleChange}
               />
-              <h2>{el.bankName}</h2>
+              <h2>{bank.bankName}</h2>
             </label>
           )
         })}

@@ -9,16 +9,16 @@ export const Product = ({value, onChange} ) => {
     <div className='plan-block'>
     <h1>Программа</h1>
     <div className='plan items'>
-            {productValues.map((el) => (
-          <label key={el.id}>
+            {productValues.map((val) => (
+          <label key={val.id}>
             <input
-              checked={el.id === value}
+              checked={val.id === value}
               onChange={handleChange}
-              value={el.id}
+              value={val.id}
               type='radio'
               name='plan'
             />
-            <h2>{el.productValue}</h2>
+            <h2>{val.productValue}</h2>
           </label>
         ))
         }
