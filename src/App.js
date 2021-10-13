@@ -9,9 +9,13 @@ function App() {
     realtyType: 'flat',
     insurance: false,
     product: 'ALL',
+    formValue: ''
   })
 
-  const filteredOffers = filterOffers(offers, filters)
+  const filteredOffers = offers
+// исправить
+
+
 
   console.log(filteredOffers, 'filtered')
 
@@ -19,8 +23,7 @@ function App() {
     return setFilters((prev) => ({ ...prev, [name]: value }))
   }
 
-  //фильтр по всем полям
-  // карточка
+
   return (
     <div className='pg-container'>
       <CardContainer offers={filteredOffers} />

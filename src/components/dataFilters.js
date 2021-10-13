@@ -47,6 +47,7 @@ export const predicates = {
 // false инпут меньше минимаольного
 // false инпут больше максимального
 
+
 export function filterOffers(offers, filters) {
   return offers.filter((offer) => {
     return Object.keys(filters).every((key) =>
@@ -54,7 +55,6 @@ export function filterOffers(offers, filters) {
     )
   })
 }
-
 // src
 //   mock
 //     offers.json

@@ -9,7 +9,10 @@ export const SearchComponent = ({ filters, changeFilter }) => {
   console.log(filters)
   return (
     <div className='search-component'>
-      <LoanForm />
+      <LoanForm
+        value={filters.formValue}
+        onChange={(value) => changeFilter('formValue', value)}
+      />
       <RealtyForm
         value={filters.realtyType}
         onChange={(value) => changeFilter('realtyType', value)}

@@ -2,15 +2,17 @@ import React from 'react'
 
 export const SearchForm = ({
   name,
-  handleChange,
-  handleSubmit,
+  onChange,
   placeholder,
 }) => {
+  const handleChange = (e) => {
+    onChange(e.target.value)
+}
   return (
     <div className='search-form'>
       <div className='seach-form items'>
         <h1 className='header'>{name}</h1>
-        <form className='form' onSubmit={handleSubmit}>
+        <form className='form' >
           <input
             className='input'
             type='text'
