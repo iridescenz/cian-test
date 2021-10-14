@@ -4,11 +4,9 @@ export const Input = ({
   name,
   onChange,
   placeholder,
-  value
 }) => {
   const handleChange = (e) => {
-    value = e.target.value
-    onChange(value)
+    onChange(e.target.value)
 }
   return (
     <div className='search-form'>

@@ -8,4 +8,5 @@ export const predicates = {
   realtyType: realtyTypePredicate,
   product: productPredicate,
   insurance: insurancePredicate,
+  
 }
