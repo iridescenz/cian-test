@@ -9,10 +9,10 @@ export const SearchComponent = ({ filters, changeFilter }) => {
   return (
     <div className='search-component'>
       <InputForm
-        value={filters.loanValue}
-        onChange={(value) => changeFilter('loanValue', value)}
-        value1={filters.paymentValue}
-        onChange1={(value) => changeFilter('paymentValue', value)}
+        loanValue={filters.loanValue}
+        onChangeLoanValue={(value) => changeFilter('loanValue', value)}
+        paymentValue={filters.paymentValue}
+        onChangePaymentValue={(value) => changeFilter('paymentValue', value)}
       />
       <RealtyForm
         value={filters.realtyType}

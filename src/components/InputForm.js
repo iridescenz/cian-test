@@ -1,13 +1,24 @@
 import React from 'react'
 import { Input } from './Input'
 
-export const InputForm = ({onChange, value, onChange1, value1 }) => {
-
+export const InputForm = ({
+  onChangeLoanValue,
+  loanValue,
+  paymentValue,
+  onChangePaymentValue,
+}) => {
   return (
     <div>
-      <Input name='Первоначальный взнос' onChange={onChange} value={value}/>
-      <Input name='Размер кредита' onChange={onChange1} value={value1}/>
+      <Input
+        name='Первоначальный взнос'
+        onChange={onChangePaymentValue}
+        value={paymentValue}
+      />
+      <Input
+        name='Размер кредита'
+        onChange={onChangeLoanValue}
+        value={loanValue}
+      />
     </div>
   )
 }
-

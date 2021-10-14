@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { SearchComponent } from './components/SearchComponent'
 import { CardContainer } from './components/CardContainer'
 import { offers } from './mock/offers'
-import {filterOffers} from './core/filters/filterOffers'
+import { filterOffers } from './core/filters/filterOffers'
 
 function App() {
   const [filters, setFilters] = useState({
@@ -14,19 +14,16 @@ function App() {
     paymentValue: '',
   })
 
-
   const filteredOffers = filterOffers(offers, filters)
-// исправить
+  // исправить
 
-console.log(filters)
-
+  console.log(filters)
 
   console.log(filteredOffers, 'filtered')
 
   function changeFilter(name, value) {
     return setFilters((prev) => ({ ...prev, [name]: value }))
   }
-
 
   return (
     <div className='pg-container'>
