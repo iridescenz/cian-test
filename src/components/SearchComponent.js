@@ -3,13 +3,12 @@ import { Banks } from './Banks'
 import { Product } from './Product'
 import { RealtyForm } from './RealtyForm'
 import { Insurance } from './Insurance'
-import { LoanForm } from './LoanForm'
+import { InputForm } from './InputForm'
 
 export const SearchComponent = ({ filters, changeFilter }) => {
-  console.log(filters)
   return (
     <div className='search-component'>
-      <LoanForm
+      <InputForm
         value={filters.formValue}
         onChange={(value) => changeFilter('formValue', value)}
       />

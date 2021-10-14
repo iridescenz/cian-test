@@ -1,12 +1,14 @@
 import React from 'react'
 
-export const SearchForm = ({
+export const Input = ({
   name,
   onChange,
   placeholder,
+  value
 }) => {
   const handleChange = (e) => {
-    onChange(e.target.value)
+    value = e.target.value
+    onChange(value)
 }
   return (
     <div className='search-form'>
