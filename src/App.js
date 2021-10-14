@@ -10,7 +10,8 @@ function App() {
     realtyType: 'flat',
     insurance: false,
     product: 'ALL',
-    formValue: {loan: '6', payment: ''}
+    loanValue: '',
+    paymentValue: '',
   })
 
 
