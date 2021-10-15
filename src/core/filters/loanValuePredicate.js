@@ -1,15 +1,14 @@
 export const loanValuePredicate = (offers, value) => {
-  const minPaymentValue = offers
+  if (value < offers.minAmount) {
+    return false
+  }
+  if (value > offers.maxAmount) {
+    return false
+  }
   if (value === undefined) {
     return true
   }
-    
-  
+  if (value >= offers.minAmount && value <= offers.maxAmount) {
+    return true
+  }
 }
-
-
-// примеры тестов на предикат кредит
-// true инпут пустой
-// true инпут между максимальным и минимальным значениями оффера
-// false инпут меньше минимаольного
-// false инпут больше максимального

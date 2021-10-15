@@ -1,4 +1,4 @@
-export const paymentValuePredicate = (offers, value) => {
+export const loanValuePredicate = (offers, value) => {
   if (value < offers.minAmount) {
     return false
   }

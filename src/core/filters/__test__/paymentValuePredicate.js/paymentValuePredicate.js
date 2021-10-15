@@ -18,10 +18,13 @@ describe('input payment value test', () => {
       maxTerm: 300,
       // ...
     }
-    expect(paymentValuePredicate(offer, '')).toBeTruthy
-    expect(paymentValuePredicate(offer, 540000)).toBeTruthy
-    expect(paymentValuePredicate(offer, 16634899)).toBeFalsy
-    expect(paymentValuePredicate(offer, 300000)).toBeFalsy
-    expect(paymentValuePredicate(offer, 16634880)).toBeTruthy
+    expect(paymentValuePredicate('', offer, '')).toBeTruthy
+    expect(paymentValuePredicate(9000000, offer, 540000)).toBeFalsy
+    expect(paymentValuePredicate('', offer, 160899)).toBeTruthy
+    expect(paymentValuePredicate(9900000, offer, '')).toBeTruthy
+    expect(paymentValuePredicate(9900000, offer, 166880)).toBeTruthy
   })
 })
+
+
+//fix!
