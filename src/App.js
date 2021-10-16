@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, createContext } from 'react'
 import { SearchComponent } from './components/SearchComponent'
 import { CardContainer } from './components/CardContainer'
 import { offers } from './mock/offers'
@@ -11,16 +11,20 @@ function App() {
     realtyType: 'flat',
     insurance: false,
     product: 'ALL',
-    loanValue: '1000000',
-    paymentValue: '100',
+    loanValue: '',
+    paymentValue: '',
   })
 
   const filteredOffers = filterOffers(offers, filters)
   // исправить
 
-  console.log(filters)
+  console.log(filters, 'filters')
 
-  console.log(filteredOffers, 'filtered')
+//  const loanValueFromApp = createContext(filters.loanValue)
+
+  //нужно ли создавать контекст и передавать значение компоненту PaymentValuePredicate
+  // зависит ли платеж от значения размера кредита вообще?
+  // не бэд прекстис делать функцию компонентом?
 
   function changeFilter(name, value) {
     return setFilters((prev) => ({ ...prev, [name]: value }))
