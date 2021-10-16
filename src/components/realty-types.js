@@ -6,22 +6,22 @@ import { ReactComponent as RoomLogo } from './logos/room-logo.svg'
 export const realtyTypes = [
   {
     type: 'Квартира',
-    id: 'flat',
+    id: 'FLAT',
     pic: <FlatLogo />,
   },
   {
     type: 'Апартаменты',
-    id: 'apart',
+    id: 'APARTMENTS',
     pic: <ApartLogo />,
   },
   {
     type: 'Дом',
-    id: 'house',
+    id: 'COTTAGE',
     pic: <HouseLogo />,
   },
   {
     type: 'Комнаты',
-    id: 'room',
+    id: 'ROOM',
     pic: <RoomLogo />,
   },
 ]

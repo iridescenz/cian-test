@@ -8,17 +8,17 @@ import { PaymentValuePredicate } from './core/filters/PaymentValuePredicate'
 function App() {
   const [filters, setFilters] = useState({
     banks: [],
-    realtyType: 'flat',
+    realtyType: 'FLAT',
     insurance: false,
     product: 'ALL',
-    loanValue: '',
-    paymentValue: '',
+    loanValue: undefined,
+    // paymentValue: '',
   })
 
   const filteredOffers = filterOffers(offers, filters)
   // исправить
 
-  console.log(filters, 'filters')
+  console.log(filteredOffers, 'filters')
 
 //  const loanValueFromApp = createContext(filters.loanValue)
 

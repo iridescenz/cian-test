@@ -11,5 +11,5 @@ export const predicates = {
   product: productPredicate,
   insurance: insurancePredicate,
   loanValue: loanValuePredicate,
-  paymentValue: PaymentValuePredicate,
+  // paymentValue: PaymentValuePredicate,
 }
