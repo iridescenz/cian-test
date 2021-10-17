@@ -46,6 +46,26 @@ describe('input payment value test', () => {
         paymentValue: '',
       },
     }
+
+
+    // offer
+    // "minInitialPayment": 0.2,
+    // "maxInitialPayment": 0.5,
+    // "maxPayment": 164196.9,
+    // "minAmount": 7_000_001,
+    // "maxAmount": 20_777_207,
+
+
+    // loanValue === размер кредита → 
+    // я хочу взять 4_000_000
+    // 4_000_000 === 80% от стоимости
+    // должен быть взнос 
+
+    // paymentValue === первоначальный взнос
+    // 2_000_000
+    // 0.2 → кредит = 8_000_000
+
+
     expect(paymentValuePredicate(prop1, offer, 900)).toBeFalsy
     //loanValue = 1000 & payment = 900, should return false bc
     //maxInitialPayment = 80% from loanValue (800)

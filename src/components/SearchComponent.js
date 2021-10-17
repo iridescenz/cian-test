@@ -4,8 +4,15 @@ import { Product } from './Product'
 import { RealtyForm } from './RealtyForm'
 import { Insurance } from './Insurance'
 import { InputForm } from './InputForm'
+import {useDispatch} from 'react-redux'
+import { useSelector } from 'react-redux'
 
-export const SearchComponent = ({ filters, changeFilter }) => {
+export const SearchComponent = () => {
+  const filters = useSelector((state) => state)
+ const dispatch = useDispatch()
+  const changeFilter = (name, value) => {
+    dispatch({type: 'CHANGE', name, value})
+  }
   return (
     <div className='search-component'>
       <InputForm

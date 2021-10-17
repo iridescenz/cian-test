@@ -26,7 +26,7 @@ export const Card = ({
     .filter((prod) => prod.id === product)
     .map((prod) => prod.productValue)
   return (
-    <div className='card' key={offerId}>
+    <div className='card' >
       <div className='card-header'>
         <div className='b-name'>
           <h1>{bankName}</h1>
