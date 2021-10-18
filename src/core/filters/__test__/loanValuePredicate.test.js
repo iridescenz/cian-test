@@ -1,4 +1,4 @@
-import { loanValuePredicate } from './loanValuePredicate'
+import { loanValuePredicate } from '../loanValuePredicate'
 
 describe('input loan value test', () => {
   test('loan value predicate', () => {

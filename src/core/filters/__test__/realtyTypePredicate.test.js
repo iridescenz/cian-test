@@ -1,4 +1,4 @@
-import { realtyTypePredicate } from './realtyTypePredicate'
+import { realtyTypePredicate } from '../realtyTypePredicate'
 
 describe('filters', () => {
   test('realtyTypePredicate', () => {

@@ -1,7 +1,6 @@
 import React, { useState, createContext } from 'react'
 import { SearchComponent } from './components/SearchComponent'
 import { CardContainer } from './components/CardContainer'
-import { PaymentValuePredicate } from './core/filters/PaymentValuePredicate'
 import { store } from './redux/store'
 import { Provider } from 'react-redux'
 

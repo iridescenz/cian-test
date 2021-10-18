@@ -1,4 +1,4 @@
-import { banksPredicate } from './banksPredicate'
+import { banksPredicate } from '../banksPredicate'
 
 
 describe('banks test', () => {
