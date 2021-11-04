@@ -5,8 +5,9 @@ import { filterOffers } from '../core/filters/filterOffers'
 import { useSelector } from 'react-redux'
 
 export const CardContainer = () => {
-  const filters = useSelector((state) => state)
-console.log("🙄", filters)
+  const filters = useSelector((state) => state.change)
+  const stat = useSelector((state) => state)
+  console.log("🙄", stat)
   const filteredOffers = filterOffers(offers, filters)
   return (
     <div className='card-container'>
@@ -14,7 +15,7 @@ console.log("🙄", filters)
         filteredOffers.map((offer) => {
           return (
             <Card
-              key={offer.offerId + offer.bankId}
+              key={offer.offerId}
               bankId={offer.bankId}
               offerId={offer.offerId}
               product={offer.product}

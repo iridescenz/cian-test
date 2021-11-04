@@ -1,7 +1,7 @@
-import React, { useState, createContext } from 'react'
+import React from 'react'
 import { SearchComponent } from './components/SearchComponent'
 import { CardContainer } from './components/CardContainer'
-import { store } from './redux/store'
+import { store } from './redux/store/index'
 import { Provider } from 'react-redux'
 
 function App() {
@@ -16,6 +16,3 @@ function App() {
 }
 
 export default App
-
-
-//

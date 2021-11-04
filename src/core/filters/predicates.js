@@ -4,6 +4,7 @@ import { productPredicate } from './productPredicate'
 import { insurancePredicate } from './insurancePredicate'
 import { loanValuePredicate } from './loanValuePredicate'
 
+
 export const predicates = {
   banks: banksPredicate,
   realtyType: realtyTypePredicate,

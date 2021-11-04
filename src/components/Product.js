@@ -1,15 +1,15 @@
 import React from 'react'
-import {productValues} from './productValues'
+import { productValues } from './productValues'
 
-export const Product = ({value, onChange} ) => {
+export const Product = ({ value, onChange }) => {
   const handleChange = (e) => {
-      onChange(e.target.value)
+    onChange(e.target.value)
   }
   return (
     <div className='plan-block'>
-    <h1>Программа</h1>
-    <div className='plan items'>
-            {productValues.map((val) => (
+      <h1>Программа</h1>
+      <div className='plan items'>
+        {productValues.map((val) => (
           <label key={val.id}>
             <input
               checked={val.id === value}
@@ -20,10 +20,8 @@ export const Product = ({value, onChange} ) => {
             />
             <h2>{val.productValue}</h2>
           </label>
-        ))
-        }
-    </div>
-
+        ))}
+      </div>
     </div>
   )
 }
