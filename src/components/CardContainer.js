@@ -7,8 +7,12 @@ import { useSelector } from 'react-redux'
 export const CardContainer = () => {
   const filters = useSelector((state) => state.change)
   const stat = useSelector((state) => state)
+  const sorting = useSelector((state) => state.sort.sorting)
   console.log("🙄", stat)
-  const filteredOffers = filterOffers(offers, filters)
+  let filteredOffers = filterOffers(offers, filters)
+  if (sorting === 'sorted') {
+    filteredOffers = filteredOffers.sort((a, b) => a.rate - b.rate)
+  }
   return (
     <div className='card-container'>
       {filteredOffers.length > 0 ? (
