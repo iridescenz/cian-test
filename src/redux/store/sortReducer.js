@@ -8,3 +8,24 @@ export const sortReducer = (state = initialState, action) => {
   }
   return state
 }
+
+export const setReducePercentage = () => {
+  return {
+    type: 'SORT',
+    payload: 'percentage',
+  }
+}
+
+export const setReducePayment = () => {
+  return {
+    type: 'SORT',
+    payload: 'payment',
+  }
+}
+
+export const setIncreaseAmount = () => {
+  return {
+    type: 'SORT',
+    payload: 'amountUp',
+  }
+}

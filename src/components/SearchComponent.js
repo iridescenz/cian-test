@@ -6,7 +6,6 @@ import { Insurance } from './Insurance'
 import { InputForm } from './InputForm'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import { RiExchangeLine } from 'react-icons/ri'
 
 export const SearchComponent = () => {
   const filters = useSelector((state) => state.change)
@@ -16,9 +15,6 @@ export const SearchComponent = () => {
   }
   return (
     <div className='search-component'>
-      <div>
-        <RiExchangeLine  style={{fontSize: '30px'}} onClick={() => dispatch({ type: 'SORT', payload: 'sorted' })} />
-      </div>
       <InputForm
         loanValue={filters.loanValue}
         onChangeLoanValue={(value) => changeFilter('loanValue', value)}
