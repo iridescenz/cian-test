@@ -1,10 +1,8 @@
-const initialState = {
-    sorting: null,
-}
+const initialState = 'percentage';
 
 export const sortReducer = (state = initialState, action) => {
   if (action.type === 'SORT') {
-    return {...state, sorting: action.payload }
+    return action.payload;
   }
   return state
 }

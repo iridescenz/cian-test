@@ -1,7 +1,7 @@
 const initialState = {
   banks: [],
   realtyType: 'FLAT',
-  insurance: false,
+  insurance: true,
   product: 'ALL',
   loanValue: undefined,
 }

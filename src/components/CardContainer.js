@@ -1,47 +1,82 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Card } from './Card'
-import { offers } from '../mock/offers'
+// import { offers } from '../mock/offers'
+import {data } from './config'
 import { filterOffers } from '../core/filters/filterOffers'
 import { useSelector } from 'react-redux'
-import {SortComponent} from './SortComponent'
+import { SortComponent } from './SortComponent'
+import { priceFormatter } from './formatter'
+import axios from 'axios'
+
+const getData = () => {
+  return axios
+    .get('https://osh-emulator.fin.cian.ru/offers', {
+      headers: { userId: data.userId },
+    })
+    .then((result) => result.data)
+}
+const postData = () => {
+  return axios
+    .post('https://osh-emulator.fin.cian.ru/submit', null, {
+      headers: { userId: data.userId },
+    })
+    .then((result) => result.data)
+}
+
+const comparators = {
+  percentage: (a, b) => a.rate - b.rate,
+  payment: (a, b) => a.minInitialPayment - b.minInitialPayment,
+  amountUp: (a, b) => b.maxAmount - a.maxAmount,
+}
 
 export const CardContainer = () => {
+  // const stat = useSelector((state) => state)
+  // console.log('🙄', stat)
+  const [offers, setOffers] = useState([])
+  // useEffect(() => {
+  //   postData()
+  // }, [])
+
+  function startLoading() {
+    postData()
+  }
+//
+  function updateOffers() {
+    getData().then((data) => {
+      console.log('data', data)
+      setOffers(data.offers)
+    })
+  }
+
   const filters = useSelector((state) => state.change)
-  const stat = useSelector((state) => state)
-  const sorting = useSelector((state) => state.sort.sorting)
-  console.log("🙄", stat)
-  let filteredOffers = filterOffers(offers, filters)
-  if (filteredOffers.length === 0) {
-   return  (<h1>Поиск не дал результатов</h1>)
-  }
-  if (sorting === 'percentage') {
-    filteredOffers = filteredOffers.sort((a, b) => a.rate - b.rate)
-  }
-  if (sorting === 'payment') {
-    filteredOffers = filteredOffers.sort((a, b) => a.minInitialPayment - b.minInitialPayment)
-  }
-  if (sorting === 'amountUp') {
-    filteredOffers = filteredOffers.sort((a, b) => b.maxAmount - a.maxAmount)
-  }
-  const priceFormatter = (price) =>
-  price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+  const sorting = useSelector((state) => state.sort)
+
+  const filteredOffers = filterOffers(offers, filters).sort(
+    comparators[sorting]
+  )
+
+  // if (filteredOffers.length === 0) {
+  //   return <h1>Поиск не дал результатов</h1>
+  // }
 
   return (
     <div className='card-container'>
-        <SortComponent />
+      <button onClick={() => startLoading()}>start loading</button>
+      <button onClick={() => updateOffers()}>get offers</button>
+      <SortComponent />
       {filteredOffers.map((offer) => {
-          return (
-            <Card
-              key={offer.offerId}
-              bankId={offer.bankId}
-              offerId={offer.offerId}
-              product={offer.product}
-              rate={offer.rate}
-              minInitialPayment={offer.minInitialPayment}
-              maxAmount={`${priceFormatter(offer.maxAmount)} ₽`}
-            />
-          )
-        }) }
+        return (
+          <Card
+            key={offer.offerId}
+            bankId={offer.bankId}
+            offerId={offer.offerId}
+            product={offer.product}
+            rate={offer.rate}
+            minInitialPayment={offer.minInitialPayment}
+            maxAmount={`${priceFormatter(offer.maxAmount)} ₽`}
+          />
+        )
+      })}
     </div>
   )
 }
