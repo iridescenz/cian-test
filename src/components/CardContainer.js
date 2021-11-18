@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Card } from './Card'
 // import { offers } from '../mock/offers'
-import {data } from './config'
+import { data } from './config'
 import { filterOffers } from '../core/filters/filterOffers'
 import { useSelector } from 'react-redux'
 import { SortComponent } from './SortComponent'
@@ -33,6 +33,9 @@ export const CardContainer = () => {
   // const stat = useSelector((state) => state)
   // console.log('🙄', stat)
   const [offers, setOffers] = useState([])
+  const [original, setOriginal] = useState(0)
+  const [answered, setAnswered] = useState(0)
+  const [rejected, setRejected] = useState(0)
   // useEffect(() => {
   //   postData()
   // }, [])
@@ -40,13 +43,24 @@ export const CardContainer = () => {
   function startLoading() {
     postData()
   }
-//
+  //
+
   function updateOffers() {
     getData().then((data) => {
       console.log('data', data)
       setOffers(data.offers)
+      setOriginal(data.banksOriginal.length)
+      setAnswered(data.banksAnswered.length)
+      setRejected(data.rejectedBanks.length)
     })
   }
+  useEffect(() => {
+    startLoading()
+    console.log('started')
+  }, [])
+  useEffect(() => {
+    updateOffers()
+  }, [])
 
   const filters = useSelector((state) => state.change)
   const sorting = useSelector((state) => state.sort)
