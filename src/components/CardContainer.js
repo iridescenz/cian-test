@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { Card } from './Card'
 // import { offers } from '../mock/offers'
 import { data } from './config'
@@ -30,44 +30,48 @@ const comparators = {
 }
 
 export const CardContainer = () => {
-  // const stat = useSelector((state) => state)
-  // console.log('🙄', stat)
   const [offers, setOffers] = useState([])
-  const [original, setOriginal] = useState(0)
-  const [answered, setAnswered] = useState(0)
-  const [rejected, setRejected] = useState(0)
-  // useEffect(() => {
-  //   postData()
-  // }, [])
-
-  function startLoading() {
-    postData()
-  }
-  //
-
-  function updateOffers() {
-    getData().then((data) => {
-      console.log('data', data)
-      setOffers(data.offers)
-      setOriginal(data.banksOriginal.length)
-      setAnswered(data.banksAnswered.length)
-      setRejected(data.rejectedBanks.length)
-    })
-  }
-  useEffect(() => {
-    startLoading()
-    console.log('started')
-  }, [])
-  useEffect(() => {
-    updateOffers()
-  }, [])
-
+  const [
+    { banksAnswered, banksOriginal, rejectedBanks },
+    setDependencies,
+  ] = useState({})
   const filters = useSelector((state) => state.change)
   const sorting = useSelector((state) => state.sort)
 
   const filteredOffers = filterOffers(offers, filters).sort(
     comparators[sorting]
   )
+  // const stat = useSelector((state) => state)
+  // console.log('🙄', stat)
+
+  function startLoading() {
+    postData()
+  }
+
+  function updateOffers() {
+    getData()
+      .then((data) => {
+        setDependencies(data)
+        setOffers(data.offers)
+      })
+      .then((data) => {
+        console.log('updating', data)
+        console.log('ff', banksAnswered, banksOriginal, rejectedBanks)
+      })
+      .then(() => setTimeout(() => {}, 3300))
+      .then(() => {
+        if (
+          banksOriginal.length > 0 &&
+          banksOriginal.length !== banksAnswered.length + rejectedBanks.length
+        ) {
+          setTimeout(() => updateOffers(), 3670)
+        }
+      })
+  }
+  useEffect(() => {
+    startLoading()
+    setTimeout(() => updateOffers(), 2000)
+  }, [])
 
   // if (filteredOffers.length === 0) {
   //   return <h1>Поиск не дал результатов</h1>
@@ -75,7 +79,6 @@ export const CardContainer = () => {
 
   return (
     <div className='card-container'>
-      <button onClick={() => startLoading()}>start loading</button>
       <button onClick={() => updateOffers()}>get offers</button>
       <SortComponent />
       {filteredOffers.map((offer) => {
