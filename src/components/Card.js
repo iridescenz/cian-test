@@ -53,7 +53,7 @@ export const Card = ({
         Подробнее
       </button>
       <button className='blue-btn' type='submit'>
-        Отправить заявка
+        Отправить заявку
       </button>
     </div>
   )
