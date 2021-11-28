@@ -3,7 +3,6 @@ import { Banks } from './Banks'
 import { Product } from './Product'
 import { RealtyForm } from './RealtyForm'
 import { Insurance } from './Insurance'
-import { InputForm } from './InputForm'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 
@@ -15,10 +14,7 @@ export const SearchComponent = () => {
   }
   return (
     <div className='search-component'>
-      <InputForm
-        loanValue={filters.loanValue}
-        onChangeLoanValue={(value) => changeFilter('loanValue', value)}
-      />
+
       <RealtyForm
         value={filters.realtyType}
         onChange={(value) => changeFilter('realtyType', value)}
