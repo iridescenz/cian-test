@@ -19,7 +19,7 @@ export const banksData = [
     bankLogo: <SovComLogo />
   },
   {
-    bankName: 'Дельтакредит',
+    bankName: 'Росбанк',
     bankId: 'bank-delta',
     bankLogo: <RosBankLogo />,
   },
