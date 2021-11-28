@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/cian-test/static/css/main.9abbdd61.chunk.css",
-    "main.js": "/cian-test/static/js/main.81caa4ed.chunk.js",
-    "main.js.map": "/cian-test/static/js/main.81caa4ed.chunk.js.map",
-    "runtime-main.js": "/cian-test/static/js/runtime-main.8697a144.js",
-    "runtime-main.js.map": "/cian-test/static/js/runtime-main.8697a144.js.map",
-    "static/js/2.4e4725d7.chunk.js": "/cian-test/static/js/2.4e4725d7.chunk.js",
-    "static/js/2.4e4725d7.chunk.js.map": "/cian-test/static/js/2.4e4725d7.chunk.js.map",
-    "static/js/3.18d8ad20.chunk.js": "/cian-test/static/js/3.18d8ad20.chunk.js",
-    "static/js/3.18d8ad20.chunk.js.map": "/cian-test/static/js/3.18d8ad20.chunk.js.map",
+    "main.css": "/cian-test/static/css/main.c76232a9.chunk.css",
+    "main.js": "/cian-test/static/js/main.1b60d742.chunk.js",
+    "main.js.map": "/cian-test/static/js/main.1b60d742.chunk.js.map",
+    "runtime-main.js": "/cian-test/static/js/runtime-main.2a32f379.js",
+    "runtime-main.js.map": "/cian-test/static/js/runtime-main.2a32f379.js.map",
+    "static/js/2.3bba61b5.chunk.js": "/cian-test/static/js/2.3bba61b5.chunk.js",
+    "static/js/2.3bba61b5.chunk.js.map": "/cian-test/static/js/2.3bba61b5.chunk.js.map",
+    "static/js/3.5b425db4.chunk.js": "/cian-test/static/js/3.5b425db4.chunk.js",
+    "static/js/3.5b425db4.chunk.js.map": "/cian-test/static/js/3.5b425db4.chunk.js.map",
     "index.html": "/cian-test/index.html",
-    "static/css/main.9abbdd61.chunk.css.map": "/cian-test/static/css/main.9abbdd61.chunk.css.map",
-    "static/js/2.4e4725d7.chunk.js.LICENSE.txt": "/cian-test/static/js/2.4e4725d7.chunk.js.LICENSE.txt",
+    "static/css/main.c76232a9.chunk.css.map": "/cian-test/static/css/main.c76232a9.chunk.css.map",
+    "static/js/2.3bba61b5.chunk.js.LICENSE.txt": "/cian-test/static/js/2.3bba61b5.chunk.js.LICENSE.txt",
     "static/media/apart-logo.fb5dfd8e.svg": "/cian-test/static/media/apart-logo.fb5dfd8e.svg",
     "static/media/bank-domrf.cebae843.svg": "/cian-test/static/media/bank-domrf.cebae843.svg",
     "static/media/bank-gpb.72625780.svg": "/cian-test/static/media/bank-gpb.72625780.svg",
@@ -25,9 +25,9 @@
     "static/media/room-logo.de9d292d.svg": "/cian-test/static/media/room-logo.de9d292d.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8697a144.js",
-    "static/js/2.4e4725d7.chunk.js",
-    "static/css/main.9abbdd61.chunk.css",
-    "static/js/main.81caa4ed.chunk.js"
+    "static/js/runtime-main.2a32f379.js",
+    "static/js/2.3bba61b5.chunk.js",
+    "static/css/main.c76232a9.chunk.css",
+    "static/js/main.1b60d742.chunk.js"
   ]
 }
