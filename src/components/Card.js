@@ -26,7 +26,7 @@ export const Card = ({
     .filter((prod) => prod.id === product)
     .map((prod) => prod.productValue)
   return (
-    <div className='card' >
+    <div className='card'>
       <div className='card-header'>
         <div className='b-name'>
           <h1>{bankName}</h1>
@@ -48,13 +48,14 @@ export const Card = ({
           <h1> от {minInitialPayment * 100} %</h1>
         </div>
       </div>
-      <div></div>
-      <button className='light-blue-btn' type='button'>
-        Подробнее
-      </button>
-      <button className='blue-btn' type='submit'>
-        Отправить заявку
-      </button>
+      <div className='more'>
+        <button className='light-blue-btn' type='button'>
+          Подробнее
+        </button>
+        <button className='blue-btn' type='submit'>
+          Отправить заявку
+        </button>
+      </div>
     </div>
   )
 }
