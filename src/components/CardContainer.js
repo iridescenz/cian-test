@@ -3,7 +3,7 @@ import { Card } from './Card'
 import { getData, postData } from './functions/api'
 import { sleep, priceFormatter, comparators } from './functions/helpers'
 import { filterOffers } from '../core/filters/filterOffers'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { SortComponent } from './SortComponent'
 
 async function loadingUntilDataReceived(callback) {
@@ -22,17 +22,34 @@ async function loadingUntilDataReceived(callback) {
   }
 }
 
+function fetchOffersThunk(sorting) {
+  return function (dispatch) {
+    postData(sorting)
+    loadingUntilDataReceived((data) => {
+      dispatch({ type: 'SET_OFFERS', payload: data })
+    })
+  }
+}
+
+// function fetchOffersThunk(sorting) {
+//   return async function (dispatch) {
+//     const data = await postData(sorting)
+//     dispatch({ type: 'SET_OFFERS', payload: data })
+//   }
+// }
+
 export const CardContainer = () => {
-  const [offers, setOffers] = useState([])
+  const dispatch = useDispatch()
   const filters = useSelector((state) => state.change)
   const sorting = useSelector((state) => state.sort)
+  const offers = useSelector((state) => state.offers)
   const filteredOffers = filterOffers(offers, filters).sort(
     comparators[sorting]
   )
 
   useEffect(() => {
-    postData()
-    loadingUntilDataReceived(setOffers)
+    // fetchOffersThunk(sorting)(dispatch)
+    dispatch(fetchOffersThunk(sorting))
   }, [])
 
   return (
